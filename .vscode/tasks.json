@@ -1,0 +1,25 @@
+{
+	"tasks": [
+		{
+			// 清空编译
+			"type": "shell",
+			"label": "rebuild",
+			"command": "mkdir -p build;rm -rf build/*;cd build;cmake .. ; make",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+		},
+		{
+			// 增量编译 
+			"type": "shell",
+			"label": "build",
+			"command": "mkdir -p build;cd build; make",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+		}
+	],
+	"version": "2.0.0"
+}
